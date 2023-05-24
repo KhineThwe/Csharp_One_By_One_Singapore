@@ -1,5 +1,10 @@
+/*
+int.Parse() method
+int.TryParse() method
+Convert.ToInt32() 
+*/
 using System;
-using Internal;
+
 
 public class standardInput2
 {
@@ -16,7 +21,7 @@ public class standardInput2
         int number2 = int.Parse(input2);
 
         int sum = number1 + number2;
-        Console.WriteLine("The sum of {} and {} is {}",number1,number2,sum);
+        Console.WriteLine("The sum of {0} and {1} is {2}",number1,number2,sum);
     }
 
 }
