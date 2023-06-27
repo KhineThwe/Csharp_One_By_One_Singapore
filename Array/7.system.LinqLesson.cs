@@ -4,7 +4,6 @@ using Internal;
 /*
 Methods to perform various operations in an array.
 */
-
 public class Lesson
 {
     public static void Main(string[] args){
