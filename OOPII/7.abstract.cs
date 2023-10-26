@@ -22,8 +22,6 @@ namespace AbstractClass{
             }
         }
     }
-   
-
     class Program{
         static void Main(string[] args){
             Dog obj = new Dog();
