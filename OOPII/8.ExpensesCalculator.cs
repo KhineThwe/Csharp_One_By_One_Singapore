@@ -21,16 +21,14 @@ class Program
         int shopping = GetExpensesAmount();
         expenses.Add(shopping);
 
-
         Console.Write("Electric Bill: ");
         int electricBill = GetExpensesAmount();
         expenses.Add(electricBill);
 
-
         Console.Write("Water Supply Bill: ");
         int waterBill = GetExpensesAmount();
         expenses.Add(waterBill);
-         
+
         Console.Write("Gas Bill: ");
         int gasBill = GetExpensesAmount();
         expenses.Add(gasBill);
@@ -40,39 +38,38 @@ class Program
 
         Console.WriteLine("\nTotal Expenses : " + totalExpenses);
         Console.WriteLine("Remaining Amount : " + remainingAmount);
-
     }
 
     public static int GetExpensesAmount()
     {
-    public int amount;
-    while(true)
-    {
-        try{
-        amount = int.Parse(Console.ReadLine());
-        if(amount>=0
-        ){
-            break;
-        }
-        Console.WriteLine("Invalid input.Please enter a positive amount.");
-        }
-        catch(FormatException)
+        int amount;
+        while (true)
         {
-        Console.WriteLine("Invalid input.Please enter a valid integer amount.");
+            try
+            {
+                amount = int.Parse(Console.ReadLine());
+                if (amount >= 0)
+                {
+                    break;
+                }
+                Console.WriteLine("Invalid input. Please enter a positive amount.");
+            }
+            catch (FormatException)
+            {
+                Console.WriteLine("Invalid input. Please enter a valid integer amount.");
+            }
         }
+
+        return amount;
     }
 
-    return amount;
-}
-
-public static int CalculateTotalExpense(ArrayList costs)
-{
-    int total = 0;
-    foreach(int cost in costs)
+    public static int CalculateTotalExpense(ArrayList costs)
     {
-        total += cost;//total = total + cost
+        int total = 0;
+        foreach (int cost in costs)
+        {
+            total += cost;
+        }
+        return total;
     }
-    return total;
-  }
 }
-
