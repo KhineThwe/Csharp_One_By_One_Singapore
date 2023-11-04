@@ -5,7 +5,8 @@ namespace AbstractClass{
 
         //abstract method 
         public abstract void makeSound();//prototype
-        //non-abstract method 
+        
+        //non-abstract or normal method 
         public void display(){
             Console.WriteLine("Non abstract method");
         }
